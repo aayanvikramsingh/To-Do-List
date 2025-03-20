@@ -1,38 +1,111 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c7b9b99c;
+  /* Light background */
+  color: #333;
+  /* Dark text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#adder {
+  background-color: #ffffff;
+  border: 2px solid rgb(0, 238, 255);
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#head {
+  color: #264653;
+  /* Darker shade for header */
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputtext,
+.input {
+  width: calc(100% - 20px);
+  /* Adjust width for padding */
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid  rgb(0, 238, 255);
+  border-radius: 4px;
+  background-color: #f0f4f8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color:  rgb(0, 238, 255);
   color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: rgb(1, 170, 200);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.task {
+  background-color: #e9f5f2;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border-left: 4px solid  rgb(0, 238, 255);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(207, 34, 34);
+}
+
+/* Align checkbox, edit, and delete button inline */
+.task-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button#edit,
+button#delete {
+  background-color: #6851e7;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#edit:hover,
+button#delete:hover {
+  background-color: #2300ea;
+}
+
+h3 {
+  color: #264653;
+}
+
+h3#count {
+  color: #333;
+  font-size: 18px;
 }
